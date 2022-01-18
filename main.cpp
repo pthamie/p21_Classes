@@ -1,26 +1,26 @@
 #include <iostream>
 #include <ClasseB.h>
 
-
-int main(int, char**) 
+int main(int argc, char **argv)
 {
-    std::cout << "Classes starting...\n";
+    if ((argc == 2) && (argv[1] == "-u"))
+    {
+    }
+    else
+    {
+        std::cout << "Classes starting...\n";
 
-    ClasseA a;
-    a.print();
-    a.vprint();
+        ClasseA a;
+        std::cout << a.print() << std::endl;
+        std::cout << a.vprint() << std::endl;
 
-    ClasseB b;
-    b.print();
-    b.vprint();
+        ClasseB b;
+        std::cout << b.print() << std::endl;
+        std::cout << b.vprint() << std::endl;
 
-    ClasseA &refTypeA = b;
+        ClasseA &refTypeA = b;
 
-    refTypeA.print();
-    refTypeA.vprint();
-
-
-
-
-
+        std::cout << refTypeA.print() << std::endl;
+        std::cout << refTypeA.vprint() << std::endl;
+    }
 }

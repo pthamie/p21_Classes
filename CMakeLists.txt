@@ -32,6 +32,8 @@ target_include_directories(classes PUBLIC
         "${PROJECT_SOURCE_DIR}/includes")
         
 
+target_link_libraries(classes Catch2::Catch2WithMain)
+
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)

@@ -7,8 +7,8 @@ public:
     ~ClasseB();
 
 public:
-    void print();
+    int print();
 
-    virtual void vprint();
+    virtual int vprint();
 
 };

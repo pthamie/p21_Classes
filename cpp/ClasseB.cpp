@@ -11,12 +11,16 @@ ClasseB::~ClasseB()
 
 }
 
-void ClasseB::print()
+int ClasseB::print()
 {
     std::cout << "ClasseB" << std::endl;
+
+    return 2;
 }
 
-void ClasseB::vprint()
+int ClasseB::vprint()
 {
     std::cout << "ClasseB" << std::endl;
+
+    return 22;
 }

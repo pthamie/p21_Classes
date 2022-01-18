@@ -11,12 +11,16 @@ ClasseA::~ClasseA()
 
 }
 
-void ClasseA::print()
+int ClasseA::print()
 {
     std::cout << "ClasseA" << std::endl;
+
+    return 1;
 }
 
-void ClasseA::vprint()
+int ClasseA::vprint()
 {
     std::cout << "ClasseA" << std::endl;
+
+    return 11;
 }
