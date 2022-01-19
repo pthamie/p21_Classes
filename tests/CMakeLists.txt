@@ -14,7 +14,6 @@ FetchContent_MakeAvailable(Catch2)
 
 
 include(CTest)
-add_test(NAME unit COMMAND classes -u)
 
 enable_testing()
 
