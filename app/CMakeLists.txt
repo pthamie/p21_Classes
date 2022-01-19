@@ -5,18 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 Include(FetchContent)
 
-FetchContent_Declare(
-        Catch2
-        GIT_REPOSITORY https://github.com/catchorg/Catch2.git
-        GIT_TAG v3.0.0-preview3
-)
-FetchContent_MakeAvailable(Catch2)
 
-
-include(CTest)
-add_test(NAME unit COMMAND classes -u)
-
-enable_testing()
 
 include_directories("./includes")
 
@@ -32,7 +21,7 @@ target_include_directories(classes PUBLIC
         "${PROJECT_SOURCE_DIR}/includes")
         
 
-target_link_libraries(classes Catch2::Catch2WithMain)
+target_link_libraries(classes)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
